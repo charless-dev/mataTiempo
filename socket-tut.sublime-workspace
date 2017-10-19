@@ -1,0 +1,719 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fs",
+				"frase"
+			],
+			[
+				"col-xs-off",
+				"col-xs-offset-4 \tBootstrap 3 Class"
+			],
+			[
+				"No",
+				"nombre"
+			],
+			[
+				"i",
+				"idelement"
+			],
+			[
+				"r",
+				"rgb()"
+			],
+			[
+				"ava",
+				"avatarW"
+			],
+			[
+				"w",
+				"window"
+			],
+			[
+				"a",
+				"avatarW"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"me",
+				"meta"
+			],
+			[
+				"ge",
+				"getElementById"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"n",
+				"nombreUsusario"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"img-",
+				"img-responsive \tBootstrap 3 Class"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"mov",
+				"movimiento"
+			],
+			[
+				"id",
+				"idsocket"
+			],
+			[
+				"uesr",
+				"users"
+			],
+			[
+				"user",
+				"users"
+			],
+			[
+				"html",
+				"htmlboiler\thtmlboiler"
+			],
+			[
+				"mx",
+				"max-width"
+			],
+			[
+				"bloc",
+				"center-block \tBootstrap 3 Class"
+			],
+			[
+				"te",
+				"text-transform"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"m",
+				"margin-bottom"
+			],
+			[
+				"c",
+				"content"
+			],
+			[
+				"t",
+				"top"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"ini",
+				"inherit"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"backgr",
+				"background-size"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"lis",
+				"list-style-type"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"back-g",
+				"background-position"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"MAR",
+				"margin-bottom"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"col-xs-",
+				"col-xs-12 \tBootstrap 3 Class"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"img",
+				"img\tTag"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"mi",
+				"min-width"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"btn",
+				"btn-info \tBootstrap 3 Class"
+			],
+			[
+				"bt",
+				"btn-danger \tBootstrap 3 Class"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 1379,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/index.html",
+			"settings":
+			{
+				"buffer_size": 9203,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 147.0,
+		"last_filter": "set html",
+		"selected_items":
+		[
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set css",
+				"Set Syntax: CSS"
+			],
+			[
+				"set htt",
+				"Set Syntax: HTML"
+			],
+			[
+				"set php",
+				"Set Syntax: PHP"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta ",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"set htl",
+				"Set Syntax: HTML"
+			],
+			[
+				"set ht",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Applications/MAMP/htdocs/socket-tut",
+		"/Applications/MAMP/htdocs/socket-tut/client",
+		"/Applications/MAMP/htdocs/socket-tut/client/img"
+	],
+	"file_history":
+	[
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/630165DB-7F81-4076-B125-D072911C859F/index.html",
+		"/Applications/MAMP/htdocs/socket-tut/index.html",
+		"/Applications/MAMP/htdocs/socket-tut/app.js",
+		"/Applications/MAMP/htdocs/socket-tut/package.json",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/2D6593C9-A983-45F9-9C9C-301F52D9CBB9/header.php",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/C022A028-8374-4762-B816-D600AFB4EE90/main.css",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/2C1A9639-5785-4F05-80B2-E9DA3E56A871/custom.css",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/5B20ACB9-8E06-4F36-9010-E3A096F73F5F/content-single.php",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/ADE6BDF8-EEB3-4F0B-BAB3-6959A146ED89/custom.css",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/F8EB1AB4-BEA8-46C3-A768-5D5EFD98B87E/main.css",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/FD39A30F-B81C-43FB-B5F4-AF495944043E/custom.js",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/36DFB5FE-B7AF-4AEA-ACB0-2B32ADF35D7D/footer.php",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/04324D81-75C1-4C49-9AAE-CA35CF4D2414/custom.css",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/BC16D48E-229C-49E9-A17E-78604321C4DC/custom.css",
+		"/Users/iMac/Desktop/pa llevar/header.php",
+		"/Users/iMac/Desktop/Moómpaya Spa y Belleza _ Masajes, Microblading, Uñas y Depilación Guadalajara.htm",
+		"/Users/iMac/Documents/Clientes/Notas/Para un sitio de videos",
+		"/Applications/MAMP/htdocs/fusion/wp-content/themes/thefox_child_theme/style.css",
+		"/Applications/MAMP/htdocs/fusion/wp-content/themes/thefox_child_theme/single-staff.php",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/52446CFD-CC2E-4469-887D-BE6D4B1E0469/main.css",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/16CD42AF-4B3E-496E-9CF0-1C43D24318E8/custom.css",
+		"/Users/iMac/Dropbox/Firmas/Firma Carlos A.html",
+		"/Users/iMac/Dropbox/Firmas/Firma Carlos.html",
+		"/Users/iMac/Dropbox/Firmas/untitled.html",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/75ACC8C7-5549-44C3-8571-30FED343873C/main.css",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/CDE942C2-FE67-4A74-A896-12030B552EC9/custom.css",
+		"/Applications/MAMP/htdocs/fusion/wp-content/themes/thefox/functions/theme-functions.php",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/D0E160E5-38E4-4E43-85DD-62195449F2B4/untitled.html",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/D3EBA88C-FCA3-424C-940F-5068714F917C/custom.css",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/18086AE7-4C1B-4C52-9F98-B8CA5B71F697/main.css",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/383CA955-1A88-4811-9765-809EFD29FC2C/functions.php",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/2ED85855-22EF-459A-A87F-F9A2CD05637A/header.php",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/53FE9BE8-3C18-4F27-B95D-4F45D446920A/custom.css",
+		"/Users/iMac/Library/Caches/Cleanup At Startup/Transmit/70BD587E-88B0-4D67-986D-250A274BD14C/main.css",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/css/custom.css",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/css/main.css",
+		"/Users/iMac/Desktop/index.html",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/includes/footer.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-master/functions/widgets.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/js/custom.js",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/functions.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/tmp/tmp-cosas-home.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/tmp/tmp-eventos-home.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/tmp/tmp-team-home.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/includes/header.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/tmp/tmp-team.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/css/carousel.css",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-master/js/bst.js",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/tmp/sidebar.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/includes/loops/content-page.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/header.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-child-master/page.php",
+		"/Applications/MAMP/htdocs/onlykids/kinder-directory/themes/bst-master/functions/setup.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/onlykids/wp-config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/index.html",
+		"/Users/iMac/Desktop/untitled.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"span",
+			"usuariogano",
+			"\"",
+			"document",
+			"meta",
+			"notify",
+			"h2",
+			"lank\">",
+			"notify",
+			" ",
+			"class=ava",
+			"atar\">",
+			"tar>",
+			"lass=\"avata",
+			";\"",
+			"; ",
+			"<img",
+			"http://192.168.1.123:3000/socket-tut",
+			":3000/img",
+			"rc=\"img/p",
+			"\"col-xs-2\"></div>",
+			"\t\t\t<div class=\"col-xs-2\"></div>\t\t\t\n\t\t</div>",
+			"eName",
+			".svg",
+			"logo_img",
+			"'Comfortaa'",
+			"myBtn",
+			"#myBtn",
+			"jQuery",
+			"a></li>",
+			"<a ti",
+			".css",
+			"boot",
+			"Imagen para ",
+			" – ",
+			".ajax_post.blog_3_col",
+			"mail",
+			"diggs",
+			"digg",
+			"$digg!==",
+			"$digg",
+			"digg",
+			"egro\"><",
+			"staff_info",
+			"<p>",
+			"\"rojo",
+			"p><span>'._",
+			"90",
+			"%;\n",
+			".rd_staff_p03 .staff_post_ctn:hover .bw-wrapper a:before",
+			"0",
+			"7",
+			"100",
+			"box-container",
+			", .f",
+			"2.5",
+			"25",
+			"levitate",
+			"\n.nf-f",
+			"1.5",
+			"#randomlq9j605lo3sw304hsbay_port ",
+			"header .wrapper",
+			"<!-- Custom Styling -->",
+			".gif",
+			"ont-family: 'Comfortaa';",
+			"', cursive;",
+			"loadingpa",
+			"seccion-creencias",
+			"seccion-mision",
+			"after",
+			"</p>",
+			"<p>",
+			"li>",
+			"li",
+			"</li>",
+			"li>",
+			" 51",
+			"r {",
+			"2",
+			"bar>",
+			".navbar-default .",
+			"“",
+			"ul",
+			"nowrap;\"",
+			"<div>",
+			"\"",
+			"class=\"wow rotateInUpRight\"",
+			"ta-wow-",
+			"fset=\"10",
+			"<span ",
+			"<span style",
+			"custom",
+			"22",
+			"45",
+			"270px",
+			".navbar-nav",
+			"color:",
+			" a",
+			">:",
+			":nth-ch",
+			"red",
+			"\t",
+			" \t",
+			"-5",
+			"31",
+			", .t",
+			"\t\t\t<?php\n\t\t\t\t$args = array('child_of' => get_cat_ID( 'Mes Actual' ));\n\t\t\t\t$categories = get_categories( $args );\n\t\t\t\tforeach($categories as $category) { \n\t\t\t\t\techo '<span>'.$category->name.'</span>';\n\t\t\t\t}\n\t\t\t\t?>",
+			"fonts/",
+			"\"",
+			"c_id",
+			"row",
+			"$releaseQuery",
+			"args",
+			"com",
+			"p",
+			"h5",
+			"span",
+			"xs",
+			"<span>",
+			"hover",
+			"get_template_directory_uri()",
+			"bst-child",
+			"bs",
+			"*>a.btn-hover",
+			"* ",
+			"a.btn-hover",
+			".main-menu li a",
+			", ."
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1059,
+								1059
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9203,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1227,
+								1227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 242.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "socket-tut.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 202.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
