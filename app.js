@@ -7,13 +7,14 @@ app.use(express.static("client"));
 
 users = [];
 posicion = 0;
-tiempo = 60;
+tiempo = 20;
 //console.log(usuario);
 
 io.on('connection', function(socket){
 
 	console.log("Conexion exitosa");
 	posicion = 0;
+
 	socket.on('setUsername', function(data){
 
 		if(users.find(validateUsername)){
@@ -23,9 +24,8 @@ io.on('connection', function(socket){
 			users.push(user);
 			io.sockets.connected[ socket.id ].emit('usuariosConectados', users.length);
 			io.sockets.connected[ socket.id ].emit('userSet', user);
-			io.sockets.emit('addUser', users);
-			console.log(users);
-			if (users.length === 1) {
+
+			if (users.length >= 1) {
 				var intervaloInicio = setInterval(
 					function(){
 						tiempo--;
@@ -33,20 +33,17 @@ io.on('connection', function(socket){
 							io.sockets.emit('tiempo',{tiempo:tiempo});
 						}else {
 							clearInterval(intervaloInicio);
-							
+							io.sockets.emit('addUser', users);
 						}
 				}, 500);
 			}
 			//io.sockets.emit('addUser', users);
 		}
 		function validateUsername(item){
-			return users.findIndex(x => x.username == data.nombre);
-			//return item.nombre === data.nombre;
+			//return users.findIndex(x => x.username == data.nombre);
+			return item.nombre === data.nombre;
 		}
 	});
-
-
-
 
 	socket.on('moverUser', function (data) {
 		io.sockets.emit('moverTodo', {idelement:socket.id});
@@ -66,10 +63,14 @@ io.on('connection', function(socket){
 
 	socket.on('disconnect', function () {
 		socket.broadcast.emit('usuarioDesconectado',{ id: socket.id});
-		index = users.findIndex(x => x.id==socket.id);
-		users.splice(index,1);
-	});
 
+		index = users.findIndex(x => x.id == socket.id);
+		console.log("desconectado: " + index.username);
+		users.splice(index,1);
+		if (users.length == 0) {
+			tiempo = 20;
+		}
+	});
 });
 
 server.listen(3000, function(){

@@ -38,7 +38,7 @@
 
 	<div class="col-sm-4"></div>
 	<div class="col-sm-4">
-		
+
 	</div>
 	<div class="col-sm-4"></div>
 
@@ -84,7 +84,7 @@
 			<div class="col-md-12 loader-msg">
 				<p>Cargando avatars...</p>
 			</div>
-		</div> 
+		</div>
 	</div>
 
 	<div class="container" id="carrera"></div>
@@ -92,7 +92,7 @@
 	<script>
 
 	//var socket = io();
-	var socket = io.connect('http://127.0.0.1:3000',{'forceNew':true});
+	var socket = io.connect('http://127.0.0.1:3000',{'forceNew':false});
 	var avatar;
 	var user;
 	var idsocket;
@@ -100,9 +100,11 @@
 	meta ="";
 	avatarW ="";
 	var frase;
+	id_user = null;
 
 	//dom ready()
 	$(document).ready(function(){
+
 		$.get('js/players.json',function(res){
 			players = res;
 			$.each(players,function(i, el){
@@ -111,6 +113,10 @@
 			$(".loader-msg").remove();
 			$(".avatar").on( "click", seleccionarAvatar );
 		});
+	});
+
+	$(window).on('beforeunload', function(){
+		socket.emit('disconnect');
 	});
 
 	socket.on('tiempo', function(data){
@@ -129,15 +135,15 @@
 
 	socket.on('addUser', function(data){
 		$.each(data, function(index, user){
-			$( "#carrera" ).append( '<div id="'+user.id+'" class="usuario-cont"> <span class="nombre">'+user.username+'</span>'+user.avatar+'<span class="meta"></span></div>' );
+			if ($('#'+user.id).length < 0) {
+				$( "#carrera" ).append( '<div id="'+user.id+'" class="usuario-cont"> <span class="nombre">'+user.username+'</span>'+user.avatar+'<span class="meta"></span></div>' );
+			}
 		});
 	});
 
 	socket.on('userSet', function(data){
-		meta = $("#"+data.id).find(".meta");
-		avatarW = $("#"+data.id).find(".avatar");
+		id_user = data.id;
 		$(".container-alerta").css('display','block');
-		
 	});
 
 	socket.on('usuariosConectados', function(dd){
@@ -145,18 +151,16 @@
 	});
 
 	socket.on('usuarioDesconectado',function(data){
-		document.getElementById(data.id).remove();
+		if ($('#'+data.id).length > 0) {
+			$('#'+data.id).remove();
+		}
 	});
-
-
 
 	socket.on('mostrarGano', function(data){
 		$( "<div class='usuario-gano text-center'><img src='img/win1.gif' style='width: 100%;'><h3>"+data.usuario.frase+"</h3><img src='img/win1.gif' style='width: 100%;'></div>" ).appendTo( "#"+data.usuario.id);
 	});
 
 	socket.on('mostrarPerdio', function(data){
-		//usuariollegada = data.id;
-		//numl = data.num;
 		$( "<div class='usuario-gano text-center'><span style='width: 185px; height:93px; background-position: center; background-size: cover; background-repeat: no-repeat;background-image: url(img/loser"+data.num+".gif); display: inline-block;' ></span></div>" ).appendTo( "#"+data.id);
 	});
 
@@ -183,7 +187,7 @@
 			$('#divMensaje').append('<div class="alert alert-warning alert-dismissible" role="alert">\n'
   			+'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Error!</strong> Para continuar igresa la información y selecciona un avatar.</div>');
 		}
-	};
+	}
 
 	function outIntro() {
 		$(".container-info, .container-avatars").slideUp("slow");
@@ -205,26 +209,28 @@
 		if (e.keyCode == 39 || e.keyCode == 32){
 			fired = false;
 		}
-		if (collision(avatarW, meta)) {
+		if (collision(id_user)) {
 			window.onkeydown = null;
 			window.onkeyup = null;
 			socket.emit('validarGano');
 		}
 	}
 
-	function collision($div1, $div2) {
-		var x1 = $($div1).offset().left;
-		var y1 = $($div1).offset().top;
-		var h1 = $($div1).outerHeight(true);
-		var w1 = $($div1).outerWidth(true);
-		var b1 = y1 + h1;
-		var r1 = x1 + w1;
-		var x2 = $($div2).offset().left;
-		var y2 = $($div2).offset().top;
-		var h2 = $($div2).outerHeight(true);
-		var w2 = $($div2).outerWidth(true);
-		var b2 = y2 + h2;
-		var r2 = x2 + w2;
+	function collision(id_user) {
+		meta = $("#"+id_user).find(".meta");
+		avatar = $("#"+id_user).find(".avatar");
+		var x1 = avatar.offset().left;
+		var y1 = avatar.offset().top;
+		var h1 = avatar.outerHeight(true);
+		var w1 = avatar.outerWidth(true);
+		var b1 = Number(y1) + Number(h1);
+		var r1 = Number(x1) + Number(w1);
+		var x2 = meta.offset().left;
+		var y2 = meta.offset().top;
+		var h2 = meta.outerHeight(true);
+		var w2 = meta.outerWidth(true);
+		var b2 = Number(y2) + Number(h2);
+		var r2 = Number(x2) + Number(w2);
 
 		if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
 
