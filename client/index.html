@@ -81,42 +81,10 @@
 	<div class="container container-avatars">
 		<br><br><br>
 		<div class="row">
-			<div class="col-xs-2"><div style="background-image: url(img/p1.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p2.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p3.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p4.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p5.gif); transform: scaleX(-1);" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p6.gif);  transform: scaleX(-1);" class="avatar"></div></div>
-		</div>
-		<div class="row">
-			<div class="col-xs-2"><div style="background-image: url(img/p7.gif);  transform: scaleX(-1);" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p8.gif); transform: scaleX(-1);" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p9.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p10.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p11.gif);  transform: scaleX(-1);" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p12.gif)" class="avatar"></div></div>
-		</div>
-		<div class="row">
-			<div class="col-xs-2"><div style="background-image: url(img/p13.gif); transform: scaleX(-1);" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p14.gif);  transform: scaleX(-1);" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p15.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p16.gif);  transform: scaleX(-1);" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p17.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p18.gif);  transform: scaleX(-1);" class="avatar"></div></div>
-		</div>
-		<div class="row">
-			<div class="col-xs-2"><div style="background-image: url(img/p19.gif);  transform: scaleX(-1);" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p20.gif);  transform: scaleX(-1);" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p21.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p22.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p23.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p24.gif)" class="avatar"></div></div>
-		</div>
-		<div class="row">
-			<div class="col-xs-2"><div style="background-image: url(img/p25.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p26.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p27.gif)" class="avatar"></div></div>
-		</div>
+			<div class="col-md-12 loader-msg">
+				<p>Cargando avatars...</p>
+			</div>
+		</div> 
 	</div>
 
 	<div class="container" id="carrera"></div>
@@ -128,10 +96,23 @@
 	var avatar;
 	var user;
 	var idsocket;
+	var players;
 	meta ="";
 	avatarW ="";
 	var frase;
 
+	//dom ready()
+	$(document).ready(function(){
+		$.get('js/players.json',function(res){
+			players = res;
+			$.each(players,function(i, el){
+				$(".container-avatars .row").append('<div class="col-xs-2"><div id="'+el.name+'" style="background-image: url('+el.url+'); '+(el.orientation < 0 ? 'transform: scaleX(-1);' : '') + '" class="avatar"></div></div>')
+			});
+			$(".loader-msg").remove();
+			$(".avatar").on( "click", seleccionarAvatar );
+		});
+	});
+	
 	socket.on('userExists', function(data){
 		document.getElementById('error-container').innerHTML = data;
 		alert("asasasasas");
@@ -181,7 +162,6 @@
 		$(this).addClass('selected');
 		avatar = $(this).clone().wrap('<p>').parent().html();
 	}
-	$(".avatar").on( "click", seleccionarAvatar );
 
 	function setUsername(){
 
