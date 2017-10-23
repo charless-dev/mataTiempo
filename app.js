@@ -7,7 +7,7 @@ app.use(express.static("client"));
 
 users = [];
 posicion = 0;
-tiempo = 20;
+tiempo = 2;
 //console.log(usuario);
 
 io.on('connection', function(socket){
@@ -68,7 +68,7 @@ io.on('connection', function(socket){
 		console.log("desconectado: " + index.username);
 		users.splice(index,1);
 		if (users.length == 0) {
-			tiempo = 20;
+			tiempo = 2;
 		}
 	});
 });

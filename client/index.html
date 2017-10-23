@@ -87,7 +87,10 @@
 		</div>
 	</div>
 
-	<div class="container" id="carrera"></div>
+	<div class="container" id="carrera">
+		<img src="img/borde1.png" class="borde b1">
+		<img src="img/borde2.png" class="borde b2">
+	</div>
 
 	<script>
 
@@ -135,9 +138,9 @@
 
 	socket.on('addUser', function(data){
 		$.each(data, function(index, user){
-			if ($('#'+user.id).length < 0) {
+			//if ($('#'+user.id).length < 0) {
 				$( "#carrera" ).append( '<div id="'+user.id+'" class="usuario-cont"> <span class="nombre">'+user.username+'</span>'+user.avatar+'<span class="meta"></span></div>' );
-			}
+			//}
 		});
 	});
 

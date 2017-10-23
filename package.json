@@ -4,6 +4,7 @@
   "description": "www.tutorialspoint.com/socket.io",
   "main": "index.js",
   "scripts": {
+    "z": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,5 +12,8 @@
   "dependencies": {
     "express": "^4.15.3",
     "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
