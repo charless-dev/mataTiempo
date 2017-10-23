@@ -7,6 +7,7 @@ app.use(express.static("client"));
 
 users = [];
 posicion = 0;
+tiempo = 60;
 //console.log(usuario);
 
 io.on('connection', function(socket){
@@ -23,12 +24,29 @@ io.on('connection', function(socket){
 			io.sockets.connected[ socket.id ].emit('usuariosConectados', users.length);
 			io.sockets.connected[ socket.id ].emit('userSet', user);
 			io.sockets.emit('addUser', users);
+			console.log(users);
+			if (users.length === 1) {
+				var intervaloInicio = setInterval(
+					function(){
+						tiempo--;
+						if (tiempo >= 0) {
+							io.sockets.emit('tiempo',{tiempo:tiempo});
+						}else {
+							clearInterval(intervaloInicio);
+							
+						}
+				}, 500);
+			}
+			//io.sockets.emit('addUser', users);
 		}
 		function validateUsername(item){
 			return users.findIndex(x => x.username == data.nombre);
 			//return item.nombre === data.nombre;
 		}
 	});
+
+
+
 
 	socket.on('moverUser', function (data) {
 		io.sockets.emit('moverTodo', {idelement:socket.id});
