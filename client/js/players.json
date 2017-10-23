@@ -133,5 +133,30 @@
         "name": "scorpion",
         "url": "img/p27.gif",
         "orientation": 1
-    }
+    },
+    {
+        "name": "carro",
+        "url": "img/carros/p1.png",
+        "orientation": 1
+    },
+    {
+        "name": "carro1",
+        "url": "img/carros/p2.png",
+        "orientation": 1
+    },
+    {
+        "name": "carro2",
+        "url": "img/carros/p3.png",
+        "orientation": 1
+    },
+    {
+        "name": "carro3",
+        "url": "img/carros/p4.png",
+        "orientation": 1
+    },
+    {
+        "name": "carro4",
+        "url": "img/carros/p5.png",
+        "orientation": 1
+    }              
 ]
