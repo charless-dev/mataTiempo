@@ -79,7 +79,6 @@
 		</div>
 	</div>
 	<div class="container container-avatars">
-		<br><br><br>
 		<div class="row">
 			<div class="col-md-12 loader-msg">
 				<p>Cargando avatars...</p>
@@ -141,11 +140,7 @@
 
 	socket.on('addUser', function(data){
 		$.each(data, function(index, user){
-<<<<<<< HEAD
 			//if ($('#'+user.id).length < 0) {
-=======
-			if ($('#'+user.id).length == 0) {
->>>>>>> 25ea68953fe22bb10d924ce572d1ef4a971301cd
 				$( "#carrera" ).append( '<div id="'+user.id+'" class="usuario-cont"> <span class="nombre">'+user.username+'</span>'+user.avatar+'<span class="meta"></span></div>' );
 			//}
 		});

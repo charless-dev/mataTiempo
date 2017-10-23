@@ -74,6 +74,10 @@ top: 33px;
     padding: 5px 6px;
     background-color: red;
 }
+.container-avatars {
+    padding: 20px;
+    background-color: #fff;	
+}
 .avatar{
 	width: 100%;
 	height: 200px;
