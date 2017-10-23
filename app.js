@@ -7,8 +7,8 @@ app.use(express.static("client"));
 
 users = [];
 posicion = 0;
+
 tiempo = 2;
-//console.log(usuario);
 
 io.on('connection', function(socket){
 
@@ -35,7 +35,7 @@ io.on('connection', function(socket){
 							clearInterval(intervaloInicio);
 							io.sockets.emit('addUser', users);
 						}
-				}, 500);
+				}, 1000);
 			}
 			//io.sockets.emit('addUser', users);
 		}
@@ -65,7 +65,7 @@ io.on('connection', function(socket){
 		socket.broadcast.emit('usuarioDesconectado',{ id: socket.id});
 
 		index = users.findIndex(x => x.id == socket.id);
-		console.log("desconectado: " + index.username);
+		console.log("desconectado: " + index);
 		users.splice(index,1);
 		if (users.length == 0) {
 			tiempo = 2;
