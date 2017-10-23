@@ -1,6 +1,8 @@
 body{
-	text-align: center;
-	padding-top: 65px;
+    text-align: center;
+    padding-top: 65px;
+    background: url(../img/backgroundBody.jpg) no-repeat fixed;
+    background-size: cover;
 }
 #carrera {
 
