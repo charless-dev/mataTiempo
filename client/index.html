@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello world</title>
+	<title>Voliando</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-	
+
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -14,35 +14,69 @@
 
 <body>
 
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">A Voliar!</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="col-sm-4"></div>
+	<div class="col-sm-4">
+		
+	</div>
+	<div class="col-sm-4"></div>
+
 	<div class="container container-alerta">
 		<br>
-		<div class="row">	
+		<div class="row">
 			<div class="col-xs-12 text-center">
 				<img src="img/alerta.gif" style="max-width: 50px;">
 				<img src="img/alerta.gif" style="max-width: 50px;">
 				<img src="img/alerta.gif" style="max-width: 50px;">
 				<img src="img/alerta.gif" style="max-width: 50px;">
 				<img src="img/alerta.gif" style="max-width: 50px;">
-			</div>						
-		</div>						
+			</div>
+		</div>
 		<br>
 	</div>
 
 	<div class="container container-info">
 		<br><br>
-		<div class="row">	
+		<div class="row">
 			<div class="col-xs-4 col-xs-offset-4 text-center">
 				<form>
 					<div class="form-group">
-						<input id="name" type="text" name="name" class="form-control" placeholder="Nombre">
+						<input id="name" type="text" name="name" class="form-control" placeholder="Nombre" required="true">
 					</div>
 					<div class="form-group">
-						<input id="frase" type="text" name="frase" class="form-control" placeholder="Frase si ganas">
+						<input id="frase" type="text" name="frase" class="form-control" placeholder="Frase si ganas" required="true">
 					</div>
 					<button id="button" type="button" class="btn btn-default" name="button" onclick="setUsername()">A voliar!</button>
 				</form>
-			</div>						
-		</div>						
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4" id="divMensaje"></div>
+			<div class="col-sm-4"></div>
+		</div>
 	</div>
 	<div class="container container-avatars">
 		<br><br><br>
@@ -51,24 +85,24 @@
 			<div class="col-xs-2"><div style="background-image: url(img/p2.gif)" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p3.gif)" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p4.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p5.gif); transform: scaleX(-1);" class="avatar"></div></div>			
-			<div class="col-xs-2"><div style="background-image: url(img/p6.gif);  transform: scaleX(-1);" class="avatar"></div></div>			
+			<div class="col-xs-2"><div style="background-image: url(img/p5.gif); transform: scaleX(-1);" class="avatar"></div></div>
+			<div class="col-xs-2"><div style="background-image: url(img/p6.gif);  transform: scaleX(-1);" class="avatar"></div></div>
 		</div>
 		<div class="row">
 			<div class="col-xs-2"><div style="background-image: url(img/p7.gif);  transform: scaleX(-1);" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p8.gif); transform: scaleX(-1);" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p9.gif)" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p10.gif)" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p11.gif);  transform: scaleX(-1);" class="avatar"></div></div>			
-			<div class="col-xs-2"><div style="background-image: url(img/p12.gif)" class="avatar"></div></div>						
+			<div class="col-xs-2"><div style="background-image: url(img/p11.gif);  transform: scaleX(-1);" class="avatar"></div></div>
+			<div class="col-xs-2"><div style="background-image: url(img/p12.gif)" class="avatar"></div></div>
 		</div>
 		<div class="row">
 			<div class="col-xs-2"><div style="background-image: url(img/p13.gif); transform: scaleX(-1);" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p14.gif);  transform: scaleX(-1);" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p15.gif)" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p16.gif);  transform: scaleX(-1);" class="avatar"></div></div>
-			<div class="col-xs-2"><div style="background-image: url(img/p17.gif)" class="avatar"></div></div>			
-			<div class="col-xs-2"><div style="background-image: url(img/p18.gif);  transform: scaleX(-1);" class="avatar"></div></div>						
+			<div class="col-xs-2"><div style="background-image: url(img/p17.gif)" class="avatar"></div></div>
+			<div class="col-xs-2"><div style="background-image: url(img/p18.gif);  transform: scaleX(-1);" class="avatar"></div></div>
 		</div>
 		<div class="row">
 			<div class="col-xs-2"><div style="background-image: url(img/p19.gif);  transform: scaleX(-1);" class="avatar"></div></div>
@@ -78,23 +112,69 @@
 			<div class="col-xs-2"><div style="background-image: url(img/p23.gif)" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p24.gif)" class="avatar"></div></div>
 		</div>
-		<div class="row">						
+		<div class="row">
 			<div class="col-xs-2"><div style="background-image: url(img/p25.gif)" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p26.gif)" class="avatar"></div></div>
 			<div class="col-xs-2"><div style="background-image: url(img/p27.gif)" class="avatar"></div></div>
 		</div>
 	</div>
 
+	<div class="container" id="carrera"></div>
+
 	<script>
 
 	//var socket = io();
-	var socket = io.connect('http://172.87.5.29:3000',{'forceNew':true});
+	var socket = io.connect('http://172.87.5.135:3000',{'forceNew':true});
 	var avatar;
 	var user;
 	var idsocket;
-	var meta;
-	var avatarW;
-	var frase;		
+	meta ="";
+	avatarW ="";
+	var frase;
+
+	socket.on('userExists', function(data){
+		document.getElementById('error-container').innerHTML = data;
+		alert("asasasasas");
+	});
+
+
+	socket.on('addUser', function(data){
+		$.each(data, function(index, user){
+			$( "#carrera" ).append( '<div id="'+user.id+'" class="usuario-cont"> <span class="nombre">'+user.username+'</span>'+user.avatar+'<span class="meta"></span></div>' );
+		});
+	});
+
+	socket.on('userSet', function(data){
+		meta = $("#"+data.id).find(".meta");
+		avatarW = $("#"+data.id).find(".avatar");
+		$(".container-alerta").css('display','block');
+		window.onkeydown = mover;
+		window.onkeyup = parar;
+	});
+
+	socket.on('usuariosConectados', function(dd){
+		console.log(dd);
+	});
+
+	socket.on('usuarioDesconectado',function(data){
+		document.getElementById(data.id).remove();
+	});
+
+
+
+	socket.on('mostrarGano', function(data){
+		$( "<div class='usuario-gano text-center'><img src='img/win1.gif' style='width: 100%;'><h3>"+data.usuario.frase+"</h3><img src='img/win1.gif' style='width: 100%;'></div>" ).appendTo( "#"+data.usuario.id);
+	});
+
+	socket.on('mostrarPerdio', function(data){
+		//usuariollegada = data.id;
+		//numl = data.num;
+		$( "<div class='usuario-gano text-center'><span style='width: 185px; height:93px; background-position: center; background-size: cover; background-repeat: no-repeat;background-image: url(img/loser"+data.num+".gif); display: inline-block;' ></span></div>" ).appendTo( "#"+data.id);
+	});
+
+	socket.on('moverTodo', function(data){
+		$("#"+data.idelement+" .avatar").css( "bottom", "+=5" );
+	});
 
 	function seleccionarAvatar() {
 		$(".avatar").removeClass('selected');
@@ -104,46 +184,24 @@
 	$(".avatar").on( "click", seleccionarAvatar );
 
 	function setUsername(){
-		var nombreUsusario = document.getElementById('name').value;				
-		frase = document.getElementById('frase').value;		
-		console.log(frase);
-		console.log(avatar+nombreUsusario);
-		socket.emit('setUsername', {nombre:nombreUsusario, pic:avatar});
-		outIntro();
-	};
 
-	socket.on('userExists', function(data){
-		document.getElementById('error-container').innerHTML = data;
-	});
+		nombreUsusario = document.getElementById('name').value;
+		frase = document.getElementById('frase').value;
+		$('#divMensaje').html("");
 
-	socket.on('addUser', function(data){
-		user = data.username;
-		idsocket = data.id;
-		pic = data.avatar;
-		if(user){
-			$( "body" ).append( '<div id="'+idsocket+'" class="usuario-cont"> <span class="nombre">'+user+'</span>'+pic+'<span class="meta"></span></div>' );
+		if (avatar !== undefined && nombreUsusario !== '' && frase !== '') {
+			socket.emit('setUsername', {nombre:nombreUsusario, pic:avatar, frase:frase});
+			outIntro();
+		}else {
+			$('#divMensaje').append('<div class="alert alert-warning alert-dismissible" role="alert">\n'
+  			+'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Error!</strong> Para continuar igresa la información y selecciona un avatar.</div>');
 		}
-	});
-
-	socket.on('userSet', function(data){
-		user = data.username;
-		idsocket = data.id;
-		$(".container-alerta").css('display','block');
-		window.onkeydown = mover;
-		window.onkeyup = parar;
-		meta = $("#"+idsocket+" .meta");
-		avatarW = $("#"+idsocket+" .avatar");
-	});
+	};
 
 	function outIntro() {
 		$(".container-info, .container-avatars").slideUp("slow");
+		$("html, body").animate({ scrollTop: $(document).height() }, 1000);
 	}
-
-	socket.on('usuarioDesconectado',function(data){
-		if(user){
-			document.getElementById(data.id).remove();
-		}
-	});
 
 	var fired = false;
 
@@ -151,9 +209,9 @@
 		if (e.keyCode == 39 || e.keyCode == 32){
 			if(!fired) {
 				fired = true;
-				socket.emit('moverUser');        	
+				socket.emit('moverUser');
 			}
-		}									
+		}
 	}
 
 	function parar(e) {
@@ -165,7 +223,7 @@
 			window.onkeyup = null;
 			socket.emit('validarGano');
 		}
-	}	
+	}
 
 	function collision($div1, $div2) {
 		var x1 = $div1.offset().left;
@@ -182,25 +240,9 @@
 		var r2 = x2 + w2;
 
 		if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
+
 		return true;
 	}
-
-	var usuariollegada;
-	socket.on('mostrarGano', function(data){
-		usuariollegada = data.idelement;
-		$( "<div class='usuario-gano text-center'><img src='img/win1.gif' style='width: 100%;'><h3>"+frase+"</h3><img src='img/win1.gif' style='width: 100%;'></div>" ).appendTo( "#"+usuariollegada);
-	});
-	var numl;
-	socket.on('mostrarPerdio', function(data){
-		usuariollegada = data.idelement;
-		numl = data.num;
-		$( "<div class='usuario-gano text-center'><span style='width: 185px; height:93px; background-position: center; background-size: cover; background-repeat: no-repeat;background-image: url(img/loser"+numl+".gif); display: inline-block;' ></span></div>" ).appendTo( "#"+usuariollegada);
-	});
-
-	socket.on('moverTodo', function(data){
-		$("#"+data.idelement+" .avatar").css( "bottom", "+=5" );
-	});
-
 </script>
 
 </body>

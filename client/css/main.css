@@ -1,5 +1,6 @@
 body{
 	text-align: center;
+	padding-top: 65px;
 }
 div.usuario-cont{
 	width: 1000px;
@@ -27,8 +28,8 @@ div.usuario-cont{
 	display: inline-block;
 	vertical-align: middle;
 	color: #fff;
-	margin: 0;	
-	font-size: 16px;		
+	margin: 0;
+	font-size: 16px;
 }
 div .nombre{
     display: inline-block;
