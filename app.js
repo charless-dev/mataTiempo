@@ -2,13 +2,14 @@ var express = require('express');
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+var DB = require('./Database');
 
 app.use(express.static("client"));
 
 users = [];
 posicion = 0;
-
-tiempo = 2;
+DB.createTable();
+tiempo = 10;
 
 io.on('connection', function(socket){
 
@@ -25,18 +26,18 @@ io.on('connection', function(socket){
 			io.sockets.connected[ socket.id ].emit('usuariosConectados', users.length);
 			io.sockets.connected[ socket.id ].emit('userSet', user);
 
-			if (users.length >= 1) {
+			//if (users.length >= 1) {
 				var intervaloInicio = setInterval(
 					function(){
 						tiempo--;
-						if (tiempo >= 0) {
+						if (tiempo) {
 							io.sockets.emit('tiempo',{tiempo:tiempo});
 						}else {
 							clearInterval(intervaloInicio);
 							io.sockets.emit('addUser', users);
 						}
 				}, 1000);
-			}
+			//}
 			//io.sockets.emit('addUser', users);
 		}
 		function validateUsername(item){
@@ -67,6 +68,7 @@ io.on('connection', function(socket){
 		index = users.findIndex(x => x.id == socket.id);
 		console.log("desconectado: " + index);
 		users.splice(index,1);
+		console.log('cantidad:' ,users.length);
 		if (users.length == 0) {
 			tiempo = 2;
 		}
