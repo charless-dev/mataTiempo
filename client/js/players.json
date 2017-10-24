@@ -1,10 +1,5 @@
 [
     {
-        "name": "carro",
-        "url": "img/carros/p1.png",
-        "orientation": 1
-    },
-    {
         "name": "carro1",
         "url": "img/carros/p2.png",
         "orientation": 1
@@ -28,5 +23,10 @@
         "name": "repsol",
         "url": "img/carros/p6.png",
         "orientation": 1
-    }                    
+    },
+    {
+        "name": "acura",
+        "url": "img/carros/p7.png",
+        "orientation": 1
+    }    
 ]
