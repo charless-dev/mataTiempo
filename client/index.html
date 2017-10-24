@@ -140,12 +140,8 @@
 
 	socket.on('addUser', function(data){
 		$.each(data, function(index, user){
-<<<<<<< HEAD
-
 			if ($('#'+user.id).length == 0) {
-=======
-			//if ($('#'+user.id).length < 0) {
->>>>>>> b536be3bd6a3d258c099b907ae2ff1331fa9cac4
+
 				$( "#carrera" ).append( '<div id="'+user.id+'" class="usuario-cont"> <span class="nombre">'+user.username+'</span>'+user.avatar+'<span class="meta"></span></div>' );
 			}
 		});
