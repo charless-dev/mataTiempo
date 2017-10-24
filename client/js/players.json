@@ -1,162 +1,47 @@
 [
     {
-        "name": "tiny_bear",
-        "url": "img/p1.gif",
+        "name": "repsol",
+        "url": "img/carros/p6.png",
         "orientation": 1
     },
     {
-        "name": "mario",
-        "url": "img/p2.gif",
+        "name": "acura",
+        "url": "img/carros/p7.png",
         "orientation": 1
     },
     {
-        "name": "big_bear",
-        "url": "img/p3.gif",
+        "name": "miguel",
+        "url": "img/carros/p9.png",
         "orientation": 1
-    },
+    },    
     {
-        "name": "heman",
-        "url": "img/p4.gif",
+        "name": "cuartas",
+        "url": "img/carros/p8.png",
         "orientation": 1
-    },
+    },    
     {
-        "name": "unknwon",
-        "url": "img/p5.gif",
-        "orientation": -1
-    },
-    {
-        "name": "charmander",
-        "url": "img/p6.gif",
-        "orientation": -1
-    },
-    {
-        "name": "pikachu",
-        "url": "img/p7.gif",
-        "orientation": -1
-    },
-    {
-        "name": "pony",
-        "url": "img/p8.gif",
-        "orientation": -1
-    },
-    {
-        "name": "zombie",
-        "url": "img/p9.gif",
+        "name": "ronald",
+        "url": "img/carros/p10.png",
         "orientation": 1
-    },
+    },   
     {
-        "name": "monster",
-        "url": "img/p10.gif",
+        "name": "carlos",
+        "url": "img/carros/p11.png",
         "orientation": 1
-    },
+    }, 
     {
-        "name": "fox",
-        "url": "img/p11.gif",
-        "orientation": -1
-    },
-    {
-        "name": "zombie2",
-        "url": "img/p12.gif",
+        "name": "julian",
+        "url": "img/carros/p13.png",
         "orientation": 1
-    },
+    }, 
     {
-        "name": "tiger",
-        "url": "img/p13.gif",
-        "orientation": -1
-    },
-    {
-        "name": "heman2",
-        "url": "img/p14.gif",
-        "orientation": -1
-    },
-    {
-        "name": "mario2",
-        "url": "img/p15.gif",
+        "name": "andres",
+        "url": "img/carros/p12.png",
         "orientation": 1
-    },
+    }, 
     {
-        "name": "wolf",
-        "url": "img/p16.gif",
-        "orientation": -1
-    },
-    {
-        "name": "pikachu2",
-        "url": "img/p17.gif",
+        "name": "huber",
+        "url": "img/carros/p14.png",
         "orientation": 1
-    },
-    {
-        "name": "mickey",
-        "url": "img/p18.gif",
-        "orientation": -1
-    },
-    {
-        "name": "pony2",
-        "url": "img/p19.gif",
-        "orientation": -1
-    },
-    {
-        "name": "puma",
-        "url": "img/p20.gif",
-        "orientation": -1
-    },
-    {
-        "name": "sonic",
-        "url": "img/p21.gif",
-        "orientation": 1
-    },
-    {
-        "name": "batman",
-        "url": "img/p22.gif",
-        "orientation": 1
-    },
-    {
-        "name": "carton",
-        "url": "img/p23.gif",
-        "orientation": 1
-    },
-    {
-        "name": "homero",
-        "url": "img/p24.gif",
-        "orientation": 1
-    },
-    {
-        "name": "charles",
-        "url": "img/p25.gif",
-        "orientation": 1
-    },
-    {
-        "name": "hotdog",
-        "url": "img/p26.gif",
-        "orientation": 1
-    },
-    {
-        "name": "scorpion",
-        "url": "img/p27.gif",
-        "orientation": 1
-    },
-    {
-        "name": "carro",
-        "url": "img/carros/p1.png",
-        "orientation": 1
-    },
-    {
-        "name": "carro1",
-        "url": "img/carros/p2.png",
-        "orientation": 1
-    },
-    {
-        "name": "carro2",
-        "url": "img/carros/p3.png",
-        "orientation": 1
-    },
-    {
-        "name": "carro3",
-        "url": "img/carros/p4.png",
-        "orientation": 1
-    },
-    {
-        "name": "carro4",
-        "url": "img/carros/p5.png",
-        "orientation": 1
-    }              
+    }                        
 ]

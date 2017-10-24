@@ -69,21 +69,36 @@ div.usuario-cont+div.usuario-cont{
 div .nombre{
     display: inline-block;
     position: absolute;
-top: 33px;
+	top: 33px;
     left: 23px;
     padding: 5px 6px;
     background-color: red;
 }
+.container-avatars {
+	overflow: hidden;
+    padding: 40px 40px 0;
+    background-color: #fff;	
+}
+.container-avatars .avatar {
+	 margin-bottom: 50px;
+	transform: rotate(-90deg);
+	top: 0;
+    transition: all 400ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+.container-avatars .avatar.selected{
+	top: -23px;
+    transform-origin: 90px 85px;
+    transform: rotate(-66deg);
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
 .avatar{
 	width: 100%;
 	height: 200px;
+	position: relative;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	cursor: pointer;
-}
-.avatar.selected{
-	border:solid 1px red;
 }
 div.usuario-cont .avatar{
 	width: 90px;
