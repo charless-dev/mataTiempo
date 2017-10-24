@@ -8,6 +8,7 @@ app.use(express.static("client"));
 
 users = [];
 posicion = 0;
+ganador = false;
 DB.createTable();
 tiempo = 10;
 
@@ -15,6 +16,7 @@ io.on('connection', function(socket){
 
 	console.log("Conexion exitosa");
 	posicion = 0;
+	ganador = false;
 
 	socket.on('setUsername', function(data){
 
@@ -26,19 +28,20 @@ io.on('connection', function(socket){
 			io.sockets.connected[ socket.id ].emit('usuariosConectados', users.length);
 			io.sockets.connected[ socket.id ].emit('userSet', user);
 
-			//if (users.length >= 1) {
+			if (users.length >= 2) {
 				var intervaloInicio = setInterval(
 					function(){
 						tiempo--;
-						if (tiempo) {
+						if (tiempo >= 0) {
 							io.sockets.emit('tiempo',{tiempo:tiempo});
 						}else {
+							console.log(tiempo);
 							clearInterval(intervaloInicio);
 							io.sockets.emit('addUser', users);
 						}
 				}, 1000);
-			//}
-			//io.sockets.emit('addUser', users);
+			}
+
 		}
 		function validateUsername(item){
 			//return users.findIndex(x => x.username == data.nombre);
@@ -50,16 +53,73 @@ io.on('connection', function(socket){
 		io.sockets.emit('moverTodo', {idelement:socket.id});
 	});
 
-	socket.on('validarGano', function () {
+	socket.on('validarGanador', function () {
 		posicion++;
-		if(posicion == 1){
+		if(posicion == 1 && !ganador){
 
+			ganador = true;
 			index = users.findIndex(x => x.id==socket.id);
-			console.log("gano"+ users[index]);
-			io.sockets.emit('mostrarGano', { usuario: users[index] });
-		}else{
-			io.sockets.emit('mostrarPerdio', {id:socket.id, num: posicion/*(Math.floor(Math.random() * 9) + 1)*/});
+			io.sockets.emit('mostrarGanador', { usuario: users[index] });
+			io.sockets.emit('ganador', {ganador:true});
+			/*DB.insertScore({
+				username:users[index].username,
+				puntaje:10
+			});-*/
+			console.log("gano: ", users[index].id);
 		}
+	});
+
+	socket.on('validarPerdedores', function (data) {
+
+		/*for (var i = 0; i < users.length; i++) {
+
+			console.log(users);
+
+			if (typeof users[i].id != 'undefined' && users[i].id != data.usuario.id) {
+				posicion++;
+				/*if (posicion == 2) {
+					DB.insertScore({
+						username:users[i].username,
+						puntaje:5
+					});
+				}
+
+				if (posicion == 3) {
+					DB.insertScore({
+						username:users[i].username,
+						puntaje:2
+					});
+				}
+				
+				console.log(posicion, users[i].id , data.usuario.id);
+				io.sockets.emit('mostrarPerdedores', {id:users[i].id, num: posicion});
+			}
+		}*/
+		users.forEach(function(el,i){
+			console.log(el,i);
+
+
+			if (typeof el.id != 'undefined' && el.id != data.usuario.id) {
+				posicion++;
+				/*if (posicion == 2) {
+					DB.insertScore({
+						username:users[i].username,
+						puntaje:5
+					});
+				}
+
+				if (posicion == 3) {
+					DB.insertScore({
+						username:users[i].username,
+						puntaje:2
+					});
+				}*/
+				
+				console.log(posicion, el.id , data.usuario.id);
+				io.sockets.emit('mostrarPerdedores', {id:el.id, num: posicion});
+			}
+		});
+
 	});
 
 	socket.on('disconnect', function () {
@@ -70,7 +130,7 @@ io.on('connection', function(socket){
 		users.splice(index,1);
 		console.log('cantidad:' ,users.length);
 		if (users.length == 0) {
-			tiempo = 2;
+			tiempo = 10;
 		}
 	});
 });
