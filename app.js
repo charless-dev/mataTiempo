@@ -62,63 +62,37 @@ io.on('connection', function(socket){
 			io.sockets.emit('mostrarGanador', { usuario: users[index] });
 			io.sockets.emit('ganador', {ganador:true});
             users[index].ganador = ganador;
-			/*DB.insertScore({
+			DB.insertScore({
 				username:users[index].username,
 				puntaje:10
-			});-*/
+			});
 			console.log("gano: ", users[index].id);
 		}
 	});
 
 	socket.on('validarPerdedores', function (data) {
-		/*for (var i = 0; i < users.length; i++) {
 
-			console.log(users);
-
-			if (typeof users[i].id != 'undefined' && users[i].id != data.usuario.id) {
-				posicion++;
-				/*if (posicion == 2) {
-					DB.insertScore({
-						username:users[i].username,
-						puntaje:5
-					});
-				}
-
-				if (posicion == 3) {
-					DB.insertScore({
-						username:users[i].username,
-						puntaje:2
-					});
-				}
-				
-				console.log(posicion, users[i].id , data.usuario.id);
-				io.sockets.emit('mostrarPerdedores', {id:users[i].id, num: posicion});
+	    index = users.findIndex(x => x.ganador==true);
+		if (socket.id != users[index].id) {
+	        console.log(users[index].id + " == " + socket.id);
+			posicion++;
+			if (posicion == 2) {
+				DB.insertScore({
+					username:users[index].username,
+					puntaje:5
+				});
 			}
-		}*/
-		///users.forEach(function(el,i){
-            index = users.findIndex(x => x.ganador==true);
-			if (socket.id != users[index].id) {
-                console.log(users[index].id + " == " + socket.id);
-				posicion++;
-				/*if (posicion == 2) {
-					DB.insertScore({
-						username:users[i].username,
-						puntaje:5
-					});
-				}
 
-				if (posicion == 3) {
-					DB.insertScore({
-						username:users[i].username,
-						puntaje:2
-					});
-				}*/
-				
-				//console.log(posicion, el.id , data.usuario.id);
-				io.sockets.emit('mostrarPerdedores', {id:socket.id, num: posicion});
+			if (posicion == 3) {
+				DB.insertScore({
+					username:users[index].username,
+					puntaje:2
+				});
 			}
-		///});
 
+			//console.log(posicion, el.id , data.usuario.id);
+			io.sockets.emit('mostrarPerdedores', {id:socket.id, num: posicion});
+		}
 	});
 
 	socket.on('disconnect', function () {

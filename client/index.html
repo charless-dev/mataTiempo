@@ -90,7 +90,7 @@
 		<img src="img/borde1.png" class="borde b1">
 		<img src="img/borde2.png" class="borde b2">
 	</div>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/soundmanager2/2.97a.20150601/script/soundmanager2-jsmin.js"></script>
 	<script>
 
 	//var socket = io();
@@ -103,6 +103,25 @@
 	avatarW ="";
 	var frase;
 	id_user = null;
+
+	sonido();
+
+	function sonido() {
+		soundManager.url = 'sound/';
+	    soundManager.onready(function() {
+		    soundManager.createSound({
+		        id: 'mySound',
+		        url: 'sound/top-gear.mp3'
+		    });
+
+	        soundManager.play('mySound', {
+	        	onfinish: function() {
+	        		soundManager.reboot();
+	        	}
+	    	});
+	    });
+
+	}
 
 	//dom ready()
 	$(document).ready(function(){
@@ -129,6 +148,9 @@
 			$('#button').attr('disabled', true);
 			$('#contador').append('0');
 			$('#contador').html('');
+
+
+
 		}else {
 			$('#contador').html('');
 			$('#contador').append(data.tiempo);

@@ -2,8 +2,8 @@ var sqlite3 = require('sqlite3').verbose(),
 db = new sqlite3.Database('puntajes'), DB = {};
 
 DB.createTable = function() {
-	db.run("DROP TABLE IF EXISTS puntajes");
-	db.run("CREATE TABLE IF NOT EXISTS puntujes (id INTEGER PRIMARY KEY AUTOINCREMENT, nickname TEXT, puntaje INTEGER)");
+	//db.run("DROP TABLE IF EXISTS puntajes");
+	db.run("CREATE TABLE IF NOT EXISTS puntajes (id INTEGER PRIMARY KEY AUTOINCREMENT, nickname TEXT, puntaje INTEGER)");
 	console.log("La tabla puntajes ha sido correctamente creada");
 }
 
