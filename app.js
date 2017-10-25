@@ -61,6 +61,7 @@ io.on('connection', function(socket){
 			index = users.findIndex(x => x.id==socket.id);
 			io.sockets.emit('mostrarGanador', { usuario: users[index] });
 			io.sockets.emit('ganador', {ganador:true});
+            users[index].ganador = ganador;
 			/*DB.insertScore({
 				username:users[index].username,
 				puntaje:10
@@ -70,7 +71,6 @@ io.on('connection', function(socket){
 	});
 
 	socket.on('validarPerdedores', function (data) {
-
 		/*for (var i = 0; i < users.length; i++) {
 
 			console.log(users);
@@ -95,11 +95,10 @@ io.on('connection', function(socket){
 				io.sockets.emit('mostrarPerdedores', {id:users[i].id, num: posicion});
 			}
 		}*/
-		users.forEach(function(el,i){
-			console.log(el,i);
-
-
-			if (typeof el.id != 'undefined' && el.id != data.usuario.id) {
+		///users.forEach(function(el,i){
+            index = users.findIndex(x => x.ganador==true);
+			if (socket.id != users[index].id) {
+                console.log(users[index].id + " == " + socket.id);
 				posicion++;
 				/*if (posicion == 2) {
 					DB.insertScore({
@@ -115,10 +114,10 @@ io.on('connection', function(socket){
 					});
 				}*/
 				
-				console.log(posicion, el.id , data.usuario.id);
-				io.sockets.emit('mostrarPerdedores', {id:el.id, num: posicion});
+				//console.log(posicion, el.id , data.usuario.id);
+				io.sockets.emit('mostrarPerdedores', {id:socket.id, num: posicion});
 			}
-		});
+		///});
 
 	});
 
