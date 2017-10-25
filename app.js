@@ -106,6 +106,10 @@ io.on('connection', function(socket){
 			tiempo = 10;
 		}
 	});
+
+	socket.on('mov', function(){
+		io.sockets.emit('m', {idelement:socket.id});
+	});
 });
 
 server.listen(3000, function(){

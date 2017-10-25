@@ -200,6 +200,10 @@
 		$("#"+data.idelement+" .avatar").css( "left", "+=5" );
 	});
 
+	socket.on('m', function(data){
+		$("#"+data.idelement+" .avatar").css( "left", "+=10" );
+	});
+
 	function seleccionarAvatar() {
 		$(".avatar").removeClass('selected');
 		$(this).addClass('selected');
@@ -234,6 +238,9 @@
 				fired = true;
 				socket.emit('moverUser');
 			}
+		}
+		if(e.keyCode == 90){
+			socket.emit('mov');
 		}
 	}
 
